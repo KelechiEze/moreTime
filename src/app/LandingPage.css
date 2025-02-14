@@ -65,7 +65,7 @@
 /* Navbar styles */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem 2rem;
     position: fixed;
@@ -139,8 +139,9 @@
 .hero {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100vh;
+    margin-top: 60px;
     padding: 0 10%;
     background-size: cover;
     background-position: center;
