@@ -1,0 +1,100 @@
+/* Footer Container */
+.footer {
+    display: flex;
+    justify-content: space-around; /* Brings sections closer together */
+    align-items: flex-start;
+    background-color: #6ec1e4; /* Light Blue Background */
+    color: white;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    margin-top: 100px;
+}
+
+/* Footer Logo */
+.footer-logo h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust Clock Icon */
+.clock {
+    margin-left: 5px;
+}
+
+/* Footer Sections */
+.footer-links,
+.footer-company,
+.footer-address {
+    flex: 1;
+}
+
+/* Reduce excessive spacing between sections */
+.footer-links {
+    max-width: 100px;
+}
+.footer-company {
+    max-width: 120px;
+}
+.footer-address {
+    max-width: 250px;
+}
+
+/* Section Titles */
+.footer h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Footer Links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+/* Clickable Links */
+.footer-links a, 
+.footer-company a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-company a:hover {
+    color: #f1c40f; /* Yellow hover effect */
+}
+
+/* Footer Address Text */
+.footer-address p {
+    margin: 3px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 15px; /* Reduces spacing on small screens */
+    }
+
+    .footer-logo h2 {
+        justify-content: center;
+    }
+
+    .footer-links ul {
+        padding: 0;
+    }
+
+    .footer-links, .footer-company, .footer-address {
+        margin-top: 10px; /* Reduce spacing */
+    }
+}

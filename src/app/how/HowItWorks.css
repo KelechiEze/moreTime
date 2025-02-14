@@ -41,6 +41,7 @@
     }
     100% {
         transform: scale(1);
+        opacity: 1; /* Ensure opacity stays at 1 after animation */
     }
 }
 
@@ -71,7 +72,7 @@
     animation-delay: 0.5s;
 }
 
-.how-it-works-title {
+.how-it-works-title1 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 60px;

@@ -3,6 +3,8 @@ import "./LandingPage.css"; // Import the CSS file
 import WhyChoose from "../app/choose/WhyChoose";
 import HowItWorks from "../app/how/HowItWorks";
 import WinSection from "../app/win/WinSection";
+import TestedAndTrusted from "../app/tested/TestedAndTrusted";
+import Footer from "../app/footer/Footer";
 
 const LandingPage = () => {
   return (
@@ -40,6 +42,8 @@ const LandingPage = () => {
       <WhyChoose />
       <HowItWorks />
       <WinSection />
+      <TestedAndTrusted />
+      <Footer />
     </div>
   );
 };

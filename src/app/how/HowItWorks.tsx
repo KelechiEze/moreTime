@@ -8,7 +8,7 @@ const HowItWorks = () => {
       <div className="how-it-works-content">
         {/* Left side - Steps */}
         <div className="how-it-works-text">
-          <h2 className="how-it-works-title">How It Works</h2>
+          <h2 className="how-it-works-title1">How It Works</h2>
           <ul className="how-it-works-list">
             <li>
               <Image src="/tickie.png" alt="Checkmark" width={30} height={30} />
