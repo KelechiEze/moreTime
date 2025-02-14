@@ -73,37 +73,27 @@
     top: 0;
     left: 0;
     z-index: 100;
-    animation: slideIn 0.8s ease-out;
+    background: rgba(0, 0, 0, 0.8); /* Slight transparency */
     border-bottom: 1px solid #e5e7eb; /* Light border under navbar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-/* Dark gradient overlay for better visibility */
-.navbar::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
-    z-index: -1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Logo styling */
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
     display: flex;
     align-items: center;
     animation: slideRight 1s ease-in-out;
 }
 
-/* Blue color for parts of the logo */
-.blue {
-    color: #3b82f6;
+.logo img {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Placeholder for the clock icon */
-.clock {
-    color: gray;
+.logo img:hover {
+    transform: scale(1.1);
 }
 
 /* Navbar links */
@@ -123,85 +113,131 @@
 
 .nav-links li:hover,
 .active {
-    color: #3b82f6;
+    color: #61FF00;
     font-weight: bold;
 }
 
-/* Get Started button in Navbar */
+/* Get Started button */
 .get-started {
-    background-color: #3b82f6;
-    color: white;
+    background-color: #61FF00;
+    color: black;
     padding: 0.9rem 1.8rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
     animation: bounceIn 1s ease-in-out;
+    border: none;
+    font-weight: bold;
 }
 
 .get-started:hover {
-    background-color: #2563eb;
+    background-color: black;
+    color: #61FF00;
 }
 
-/* Hero section */
+/* Hero Section */
 .hero {
     position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     text-align: left;
     color: white;
-    background: url('/landingpage.png') center/cover no-repeat;
-    background-attachment: fixed;
-    filter: brightness(0.8); /* Reduce brightness for better visibility */
+    background-size: cover;
+    background-position: center;
+    padding: 0 10%;
 }
 
-/* Dark overlay on hero background */
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
+
 
 /* Hero content */
 .hero-content {
     position: relative;
     z-index: 10;
     max-width: 600px;
-    margin-left: 200px;
     animation: slideUp 1s ease-in-out;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    color: #333;
+    margin-bottom: 2rem;
     animation: fadeIn 1.2s ease-in-out;
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+    line-height: 1.9;
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Hero section button */
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Get Started button */
 .hero-button {
-    background-color: #3b82f6;
+    background-color: #61FF00;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
-    animation: bounceIn 1.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    border: 2px solid #61FF00;
 }
 
 .hero-button:hover {
-    background-color: #2563eb;
+    background-color: black;
+    color: #61FF00;
 }
 
-/* Mobile fallback: Disable background-attachment fixed */
+/* Contact Us button */
+.contact-button {
+    background: transparent;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    border: 2px solid #61FF00;
+}
+
+.contact-button:hover {
+    background-color: #61FF00;
+    color: black;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
     .hero {
         background-attachment: scroll;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .button-group {
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none; /* Hide links for mobile */
+    }
+
+    .navbar {
+        justify-content: space-between;
     }
 }

@@ -6,10 +6,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="logo">
-        <span className="blue">M</span>
-        <span className="clock">O</span> {/* Placeholder for clock */}
-        <span className="blue">RE TIME</span>
-      </div>
+          <img src="/logomoretime.png" alt="More Time Logo" className="logo-img" />
+        </div>
 
       {/* Links Section */}
       <div className="footer-links">

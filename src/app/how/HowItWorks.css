@@ -49,7 +49,7 @@
 .how-it-works-container {
     padding: 60px 20px;
     background-color: white;
-    margin-top: 100px;
+    margin-top: 150px;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
 }

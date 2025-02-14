@@ -1,5 +1,5 @@
 import React from "react";
-import "./LandingPage.css"; // Import the CSS file
+import "./LandingPage.css"; // Import CSS file
 import WhyChoose from "../app/choose/WhyChoose";
 import HowItWorks from "../app/how/HowItWorks";
 import WinSection from "../app/win/WinSection";
@@ -12,33 +12,36 @@ const LandingPage = () => {
       {/* Navbar */}
       <nav className="navbar">
         <div className="logo">
-          <span className="blue">M</span>
-          <span className="clock">O</span> {/* Placeholder for clock */}
-          <span className="blue">RE TIME</span>
+          <img src="/logomoretime.png" alt="More Time Logo" className="logo-img" />
         </div>
         <ul className="nav-links">
           <li>Home</li>
           <li>About Us</li>
-          <li>Borrow</li>
-          <li>Contact</li>
+          <li>Product & Services</li>
+          <li>Partners & Agents</li>
+          <li>Contact</li> 
         </ul>
         <button className="get-started">Get Started</button>
       </nav>
 
       {/* Hero Section */}
       <section className="hero">
-        <div className="overlay"></div>
+      
         <div className="hero-content">
-          <h1>More Time <br /> More Financial Freedom</h1>
+          <h1>Top Up, Pay Bills, Earn Smart</h1>
           <p>
-            Easily access fast and flexible borrowing or lending solutions 
-            designed to help you manage your finances.
+            Need airtime? Covered. Paying bills? Handled. Want to earn? Easy!  
+            Join thousands of agents making money while keeping the world connected.  
+            Power up your wallet—because smart people don’t just spend, they earn too!  
           </p>
-          <button className="hero-button">Get Started</button>
+          <div className="button-group">
+            <button className="hero-button">Get Started</button>
+            <button className="contact-button">Contact Us</button>
+          </div>
         </div>
       </section>
 
-      {/* Why Choose More Time Section */}
+      {/* Other Sections */}
       <WhyChoose />
       <HowItWorks />
       <WinSection />

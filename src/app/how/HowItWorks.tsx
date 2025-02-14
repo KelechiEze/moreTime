@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image"; // Next.js optimized Image component
-import './HowItWorks.css'; // Import the CSS file
+import "./HowItWorks.css"; // Import the CSS file
 
 const HowItWorks = () => {
   return (
@@ -11,16 +10,16 @@ const HowItWorks = () => {
           <h2 className="how-it-works-title1">How It Works</h2>
           <ul className="how-it-works-list">
             <li>
-              <Image src="/tickie.png" alt="Checkmark" width={30} height={30} />
-              Sign up and Verify your Identity
+              <img src="/tickie.png" alt="Checkmark" className="checkmark-icon" />
+              Sign up and fund your wallet instantly
             </li>
             <li>
-              <Image src="/tickie.png" alt="Checkmark" width={30} height={30} />
-              Apply for a loan or lending opportunity
+              <img src="/tickie.png" alt="Checkmark" className="checkmark-icon" />
+              Purchase airtime, data, or pay bills with ease
             </li>
             <li>
-              <Image src="/tickie.png" alt="Checkmark" width={30} height={30} />
-              Get funds faster than the speed of light
+              <img src="/tickie.png" alt="Checkmark" className="checkmark-icon" />
+              Earn commissions on every transaction
             </li>
           </ul>
           <button className="get-started">Get Started</button>
@@ -28,12 +27,7 @@ const HowItWorks = () => {
 
         {/* Right side - Image */}
         <div className="how-it-works-image">
-          <Image
-            src="/loanfree.png"
-            alt="Happy Woman with Money"
-            width={350} 
-            height={350} 
-          />
+          <img src="/loanfree.png" alt="Making Payments Easily" className="how-it-works-img" />
         </div>
       </div>
     </section>

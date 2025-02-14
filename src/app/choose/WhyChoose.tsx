@@ -1,27 +1,35 @@
+"use client";
+
 import Image from "next/image";
-import './WhyChooseUs.css';
+import { useState } from "react";
+import "./WhyChooseUs.css";
+
+const images = [
+  "/galaxy.png",
+  "/nigeriancommunications.png",
+  "/mtn.png",
+  "/interconnect.png",
+  "/mtn.png",
+  "/galaxy.png",
+];
 
 const WhyChoose = () => {
+  const [isPaused, setIsPaused] = useState(false);
+
   return (
     <section className="why-choose-container">
-      <h2 className="section-title">Why Choose More Time</h2>
-      <div className="benefits">
-        {/* Fast Approval */}
-        <div className="benefit-item">
-          <Image src="/locck.png" alt="Fast Approval" width={50} height={50} />
-          <p>Fast Approval</p>
-        </div>
-
-        {/* Flexible Lending Options */}
-        <div className="benefit-item">
-          <Image src="/pikto1.png" alt="Flexible Lending Options" width={50} height={50} />
-          <p>Flexible Lending Options</p>
-        </div>
-
-        {/* Secure & Transparent */}
-        <div className="benefit-item">
-          <Image src="/bluo.png" alt="Secure & Transparent" width={50} height={50} />
-          <p>Secure & Transparent</p>
+      <h2 className="section-title">Our Trusted Partners</h2>
+      <div
+        className="carousel-container"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <div className={`carousel-content ${isPaused ? "paused" : ""}`}>
+          {images.concat(images).map((src, index) => (
+            <div key={index} className="carousel-item">
+              <Image src={src} alt="Partner Logo" width={120} height={120} />
+            </div>
+          ))}
         </div>
       </div>
     </section>
