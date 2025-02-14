@@ -1,0 +1,67 @@
+/* Why Choose Section */
+.why-choose-container {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8fcff;
+    margin-top: 100px;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+/* Benefits Container */
+.benefits {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Benefit Box */
+.benefit-item {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 20px; /* More padding for better spacing */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Increased width */
+    height: 250px; /* Increased height */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content inside */
+    align-items: center; /* Center align */
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Benefit Icons */
+.benefit-item img {
+    width: 50px; /* Adjust size */
+    height: auto;
+    margin-bottom: 40px;
+    margin-top: -60px;
+}
+
+/* Benefit Text */
+.benefit-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .benefit-item {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 320px; /* Prevent too wide cards */
+    }
+}
