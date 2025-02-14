@@ -26,17 +26,24 @@ const LandingPage = () => {
 
       {/* Hero Section */}
       <section className="hero">
-      
-        <div className="hero-content">
-          <h1>Top Up, Pay Bills, Earn Smart</h1>
-          <p>
-            Need airtime? Covered. Paying bills? Handled. Want to earn? Easy!  
-            Join thousands of agents making money while keeping the world connected.  
-            Power up your wallet—because smart people don’t just spend, they earn too!  
-          </p>
-          <div className="button-group">
-            <button className="hero-button">Get Started</button>
-            <button className="contact-button">Contact Us</button>
+        <div className="hero-wrapper">
+          {/* Left - Hero Text */}
+          <div className="hero-content">
+            <h1>Top Up, Pay Bills, Earn Smart</h1>
+            <p>
+              Need airtime? Covered. Paying bills? Handled. Want to earn? Easy!  
+              Join thousands of agents making money while keeping the world connected.  
+              Power up your wallet—because smart people don’t just spend, they earn too!  
+            </p>
+            <div className="button-group">
+              <button className="hero-button">Get Started</button>
+              <button className="contact-button">Contact Us</button>
+            </div>
+          </div>
+
+          {/* Right - Hero Image */}
+          <div className="hero-image">
+            <img src="/moreclocks.png" alt="Hero GIF" className="hero-img" />
           </div>
         </div>
       </section>

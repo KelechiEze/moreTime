@@ -65,7 +65,7 @@
 /* Navbar styles */
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     position: fixed;
@@ -73,8 +73,8 @@
     top: 0;
     left: 0;
     z-index: 100;
-    background: rgba(0, 0, 0, 0.8); /* Slight transparency */
-    border-bottom: 1px solid #e5e7eb; /* Light border under navbar */
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #e5e7eb;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -137,25 +137,28 @@
 
 /* Hero Section */
 .hero {
-    position: relative;
-    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    color: white;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 10%;
     background-size: cover;
     background-position: center;
-    padding: 0 10%;
 }
 
+/* Hero Wrapper - Text & Image Side by Side */
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+}
 
-
-/* Hero content */
+/* Hero Text Content */
 .hero-content {
-    position: relative;
-    z-index: 10;
-    max-width: 600px;
+    max-width: 550px;
     animation: slideUp 1s ease-in-out;
 }
 
@@ -175,6 +178,18 @@
     animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Hero Image */
+.hero-image {
+    flex-shrink: 0;
+}
+
+.hero-img {
+    width: 500px; /* Adjust based on your needs */
+    border-radius: 20px;
+    height: auto;
+    object-fit: contain;
+    animation: fadeIn 1.2s ease-in-out;
+}
 
 /* Buttons */
 .button-group {
@@ -218,14 +233,22 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .hero {
-        background-attachment: scroll;
+    .hero-wrapper {
+        flex-direction: column;
         text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+    }
+
+    .hero-img {
+        width: 100%;
+        max-width: 350px;
     }
 
     .hero-content {
         max-width: 100%;
-        margin-left: 0;
         text-align: center;
     }
 
@@ -234,7 +257,7 @@
     }
 
     .nav-links {
-        display: none; /* Hide links for mobile */
+        display: none;
     }
 
     .navbar {
