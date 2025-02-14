@@ -15,7 +15,7 @@ const LandingPage = () => {
           <span className="blue">RE TIME</span>
         </div>
         <ul className="nav-links">
-          <li className="active">Home</li>
+          <li>Home</li>
           <li>About Us</li>
           <li>Borrow</li>
           <li>Contact</li>

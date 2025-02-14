@@ -1,11 +1,59 @@
+/* General animation keyframes */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 /* Container */
 .how-it-works-container {
     padding: 60px 20px;
     background-color: white;
     margin-top: 100px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
-/* Flex container for text and image */
+/* Flex container */
 .how-it-works-content {
     display: flex;
     align-items: center;
@@ -18,6 +66,9 @@
 /* Left side (Text) */
 .how-it-works-text {
     max-width: 50%;
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.5s;
 }
 
 .how-it-works-title {
@@ -25,6 +76,9 @@
     font-weight: bold;
     margin-bottom: 60px;
     color: #222;
+    opacity: 0;
+    animation: bounceIn 0.8s ease-in-out forwards;
+    animation-delay: 0.3s;
 }
 
 /* List styles */
@@ -41,6 +95,9 @@
     color: #333;
     padding-right: 210px;
     margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.8s;
 }
 
 /* Checkmark Icon */
@@ -53,6 +110,15 @@
     width: 400px;
     height: auto;
     border-radius: 12px;
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards;
+    animation-delay: 0.5s;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on images */
+.how-it-works-image img:hover {
+    transform: scale(1.05);
 }
 
 /* Responsive adjustments */
